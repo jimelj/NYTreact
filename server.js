@@ -12,7 +12,7 @@ let app = express();
 let PORT = process.env.PORT || 8080;
 
 //static dir
-app.use(favicon(path.join(__dirname,'public','assets','img','favicon.ico')));
+// app.use(favicon(path.join(__dirname,'public','assets','img','favicon.ico')));
 app.use(express.static(process.cwd() + '/public'));
 
 //logger with morgan

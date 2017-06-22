@@ -3,14 +3,26 @@
 const express = require('express');
 const router = express.Router();
 //DB Dep adding our models
-let Articles = require('../models/article.js');
+let Article = require('../models/articles.js');
 
-app.get("/api", function(req, res) {
+router.get("/saved", function(req, res) {
+  // This GET request will search for all articles
+    Article.find({}).exec(function (err, doc) {
+
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.send(doc);
+        }
+    });
+
+});
+
+router.post("/", function(req, res) {
 
 
 });
 
-router.post("/api", function(req, res) {
 
-
-});
+module.exports = router;
