@@ -14,16 +14,21 @@ class Saved extends React.Component {
         return (
           <div className="panel panel-default">
             <div className="panel-heading">
-              <h3 className="panel-title"></h3>
+              <h3 className="panel-title"><i className="fa  fa-list-alt"></i> Saved articles</h3>
             </div>
             <div className="panel-body">
 
-            </div>
-            <div className="panel-footer">
-
+              {this.props.articles.map(function(article, i) {
+                return (
+              <div className="well" key={i}>
+                {article.title}
+              </div>
+            );
+              })}
             </div>
           </div>
         );
+
     }
 }
 

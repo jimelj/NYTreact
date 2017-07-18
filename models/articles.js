@@ -17,6 +17,14 @@ let ArticleSchema = new Schema({
     required: true,
     unique: true
   },
+  by:{
+    type: String,
+    unique: true,
+  },
+  section:{
+    type: String,
+    unique: true,
+  },
   url:{
     type: String,
     unique: true,
